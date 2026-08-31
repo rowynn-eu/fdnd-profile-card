@@ -43,8 +43,8 @@ article {
   min-width: 20em;
   
   border-radius: 1rem;
-  background: rgb(0 239 255);
-  background: linear-gradient(0deg, rgb(0 239 255) 40%, #4e54c8 100%);
+  background: rgb(218, 79, 146);
+  background: linear-gradient(0deg, rgb(218, 79, 146) 40%, rgb(183, 73, 126) 100%);
   box-shadow: 0 0 20px 20px rgb(0 0 0 / .1);
   
   transition: .25s;
@@ -64,7 +64,7 @@ header {
 h1 {
   margin: 2rem 0 1rem 0; /* Margin is de ruimte om het element heen. Boven beginnen, met de klok mee */
   
-  color: rgb(0 239 255); /* De tekst kleur wordt in rgb() bepaald. */
+  color: rgb(255, 255, 255); /* De tekst kleur wordt in rgb() bepaald. */
 }
 
 /* P */
@@ -72,7 +72,7 @@ h1 {
 /* Om een element met class te selecteren gebruik je een . in de selector */
 p.slogan {
   font-size:1.25em;
-  color:#030711;
+  color:#ffffff;
 }
 
 /* BUTTON */
@@ -88,7 +88,7 @@ button {
   
   border: none;
   border-radius: 50%; /* De border-radius geeft de <button> ronde hoekjes. */
-  background: rgb(0 239 255);
+  background: rgb(218, 79, 146);
   
   scale:.8;
   
