@@ -1,0 +1,19 @@
+
+/* kleuren variablen */
+:root {
+  --accent:         hsl(333, 100%, 50%) ;
+  --primair:        hsl(333, 50%, 50%);
+  --secondaire:      hsl(333, 20%, 80%) ;
+  --bg:             hsl(000, 00%, 100%);
+  --txt:            hsl(000, 00%, 00%);
+}
+
+.logo-text {
+    text-align: left;
+}
+
+article {
+    width: 600px;
+    margin: auto;
+
+}
