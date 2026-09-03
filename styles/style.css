@@ -8,7 +8,7 @@ https://camo.githubusercontent.com/a85947d98d2a157973d69e93627354614bd4ed64f2d9b
  */
 
 :root {
-  --accent:         hsl(330, 100%, 60%);
+  --accent:         hsl(330, 70%, 60%);
   --accent-muted:   hsl(330, 30%, 60%);
   --fg0:            #fbf1c7;
   --fg1:            #ebdbb2;
@@ -84,19 +84,22 @@ https://flexbox.malven.co/
 
 
 /* layout & kleur */
-a {
+a, hr {
   color: var(--accent-muted);
   &:hover {
     color: var(--accent)
   }
 }
 
+li > span {
+ color: var(--accent)
+}
+
 body
 {
   display: grid;
-  grid-auto-flow: dense;
-  grid-template-columns: 50%, 50%;
-  grid-template-rows: 5%, 45%, 45%, 5%;
+  grid-auto-flow: row;
+  grid-template-rows: 0.05fr 0.45fr 0.45fr 0.05fr;
   color: var(--fg1);
   background: var(--bg0);
 }
@@ -119,29 +122,39 @@ header, footer {
 nav {
   display: flex;
   flex-direction: column;
+  max-width: 150px;
   a {
     font-size: 2rem;
   }
 }
 
-ul, ul > li {
-  display: flex;
-  flex-direction: row;
+ul, li {
   list-style-type: none;
-  margin: 0;
+  list-style-position: outside;
+  margin: 0px;
+  padding: 0px;
 }
 
 figure {
-
   display: flex;
   align-items: stretch;
-  gap: 1rem;
+  gap: 2rem;
   margin: 0;
   img {
     max-height: 150px;
     border-radius: 10%;
   }
 }
+
+.gallery {
+    display:flex;
+    gap: 1em;
+    img {
+    max-height: 100px;
+    display: inline flow-root;
+  }
+}
+
 
 /*
     Tijd om te kijken hoe ik een one-pager hiervan maak. Bedankt Krijn!
@@ -153,7 +166,7 @@ figure {
 */
 .swap:target {
   display: block;
-
+  min-height: 200px;
   h2 {
     color: var(--accent-muted)
   }
@@ -162,4 +175,10 @@ figure {
 
 .swap {
   display: none;
+}
+
+
+.skill-row {
+  display: flex;
+  gap: 2rem;
 }
