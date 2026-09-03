@@ -102,7 +102,7 @@ a, hr {
   color: var(--accent-muted);
   &:hover {
     color: var(--accent);
-    transition: all 0.2s ease-in-out;
+    transition: all 0.15s ease-in-out;
   }
 }
 
@@ -155,7 +155,7 @@ figure {
   margin: 0rem;
   img {
     max-height: 190px;
-    border-radius: 10%;
+    border-radius: 15%;
   }
 }
 
@@ -178,19 +178,9 @@ figure {
   https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/display
 */
 
-
-/* animaties 
-https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/transition
-https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/opacity
-https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/visibility
-
-*/
 .swap:target {
   display: block;
   height: 200px;
-  h2 {
-    color: var(--accent=-muted)
-  }
 
 }
 
@@ -208,4 +198,29 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/visibility
   display: flex;
   justify-content: space-between;
   gap: 1rem;
+}
+
+/* animaties 
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/transition
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/transform
+https://codepen.io/rowynn-eu/pen/PwZPaoj
+
+*/
+@keyframes scaleAnim {
+  0%, 100% {
+    transform: rotate(-1deg);
+  }
+  50% {
+    transform: rotate(1deg);
+  }
+}
+
+figure > a > img {
+  scale: 1;
+  transition: all 0.1s ease-in-out;
+}
+
+figure > a > img:hover {
+  scale: 1.05;
+  transition: all 0.1s ease-in-out;
 }
