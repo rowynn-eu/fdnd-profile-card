@@ -33,16 +33,30 @@ https://camo.githubusercontent.com/a85947d98d2a157973d69e93627354614bd4ed64f2d9b
   /* mobile? */
 @media (max-width: 400px) {
   body {
-    margin: 0 10% 0 10%;
+    margin: 5 10%;
+    
   }
 }
 
   /* desktop? */
 @media (min-width: 500px) {
   body {
-    margin: 0 20% 0 20%;
+    margin: 5% 20%;
   }
 }
+
+@media (min-width: 1300px) {
+  body {
+    margin: 5% 30%;
+  }
+}
+
+@media (min-width: 1800px) {
+  body {
+    margin: 5% 40%;
+  }
+}
+
 
 /* 
 typografie
@@ -62,7 +76,7 @@ nav > a, h1, h2, h3, .logo {
   
 }
 
-a, p {
+a, p, li, ul{
   font-family: "IBM Plex Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -87,7 +101,8 @@ https://flexbox.malven.co/
 a, hr {
   color: var(--accent-muted);
   &:hover {
-    color: var(--accent)
+    color: var(--accent);
+    transition: all 0.2s ease-in-out;
   }
 }
 
@@ -98,8 +113,7 @@ li > span {
 body
 {
   display: grid;
-  grid-auto-flow: row;
-  grid-template-rows: 0.05fr 0.45fr 0.45fr 0.05fr;
+  grid-auto-flow: row dense;
   color: var(--fg1);
   background: var(--bg0);
 }
@@ -122,7 +136,6 @@ header, footer {
 nav {
   display: flex;
   flex-direction: column;
-  max-width: 150px;
   a {
     font-size: 2rem;
   }
@@ -130,31 +143,31 @@ nav {
 
 ul, li {
   list-style-type: none;
-  list-style-position: outside;
-  margin: 0px;
-  padding: 0px;
+  list-style-position: inside;
+  margin: 0rem;
+  padding: 0rem;
 }
 
 figure {
   display: flex;
   align-items: stretch;
   gap: 2rem;
-  margin: 0;
+  margin: 0rem;
   img {
-    max-height: 150px;
+    max-height: 190px;
     border-radius: 10%;
   }
 }
 
 .gallery {
     display:flex;
+    align-items: center;
     gap: 1em;
     img {
-    max-height: 100px;
-    display: inline flow-root;
+    max-height: 90px;
+    border-radius: 10px;
   }
 }
-
 
 /*
     Tijd om te kijken hoe ik een one-pager hiervan maak. Bedankt Krijn!
@@ -164,11 +177,17 @@ figure {
   https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:target
   https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/display
 */
+
+
+/* animaties 
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/transition
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/opacity
+*/
 .swap:target {
   display: block;
-  min-height: 200px;
+  height: 200px;
   h2 {
-    color: var(--accent-muted)
+    color: var(--accent=-muted)
   }
 
 }
@@ -181,4 +200,10 @@ figure {
 .skill-row {
   display: flex;
   gap: 2rem;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
 }
