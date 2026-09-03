@@ -4,16 +4,17 @@
   --accent:         hsl(333, 100%, 50%) ;
   --primair:        hsl(333, 50%, 50%);
   --secondaire:      hsl(333, 20%, 80%) ;
-  --bg:             hsl(000, 00%, 100%);
+  --bg:             hsl(000, 00%, 80%);
   --txt:            hsl(000, 00%, 00%);
 }
 
-.logo-text {
-    text-align: left;
-}
-
-article {
-    width: 600px;
+article, header, footer {
+    width: 700px;
     margin: auto;
 
+}
+
+menu {
+    /* https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/menu */
+  list-style-type: none;
 }
