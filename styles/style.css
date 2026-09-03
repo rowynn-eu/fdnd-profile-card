@@ -31,14 +31,14 @@ https://camo.githubusercontent.com/a85947d98d2a157973d69e93627354614bd4ed64f2d9b
   */
 
   /* mobile? */
-@media (max-width: 900px) {
+@media (max-width: 400px) {
   body {
     margin: 0 10% 0 10%;
   }
 }
 
   /* desktop? */
-@media (min-width: 900px) {
+@media (min-width: 500px) {
   body {
     margin: 0 20% 0 20%;
   }
