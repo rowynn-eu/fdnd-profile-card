@@ -9,7 +9,7 @@ https://camo.githubusercontent.com/a85947d98d2a157973d69e93627354614bd4ed64f2d9b
 
 :root {
   --accent:         hsl(330, 100%, 60%);
-  --links:          hsl(330, 30%, 60%);
+  --accent-muted:   hsl(330, 30%, 60%);
   --fg0:            #fbf1c7;
   --fg1:            #ebdbb2;
   --bg0:            #282828;
@@ -85,7 +85,7 @@ https://flexbox.malven.co/
 
 /* layout & kleur */
 a {
-  color: var(--links);
+  color: var(--accent-muted);
   &:hover {
     color: var(--accent)
   }
@@ -105,22 +105,22 @@ header, footer {
   grid-column-start: span 2;
   text-align: center;
   .logo {
-    font-size: 1.25em;
+    font-size: 1.25rem;
   }
 }
 
  nav, header, section, footer{
   background: var(--bg1);
   border-radius: 8px;
-  padding: 1em;
-  margin: 0.5em;
+  padding: 1rem;
+  margin: 0.5rem;
 }
 
 nav {
   display: flex;
   flex-direction: column;
   a {
-    font-size: 2em;
+    font-size: 2rem;
   }
 }
 
@@ -131,6 +131,35 @@ ul, ul > li {
   margin: 0;
 }
 
-figure > img {
-  max-height: 300px;
+figure {
+
+  display: flex;
+  align-items: stretch;
+  gap: 1rem;
+  margin: 0;
+  img {
+    max-height: 150px;
+    border-radius: 10%;
+  }
+}
+
+/*
+    Tijd om te kijken hoe ik een one-pager hiervan maak. Bedankt Krijn!
+
+  https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a#linking_to_an_element_on_the_same_page
+  https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements#content_sectioning
+  https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:target
+  https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/display
+*/
+.swap:target {
+  display: block;
+
+  h2 {
+    color: var(--accent-muted)
+  }
+
+}
+
+.swap {
+  display: none;
 }
