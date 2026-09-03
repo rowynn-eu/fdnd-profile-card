@@ -1,20 +1,94 @@
 
 /* kleuren variablen */
+
+/* 
+Gruvbox is mijn favoriete kleuren-palet in vele programmas vanwege de cool retro-like effect. Ik heb die als een basis genomen voor mijn kleuren.
+https://github.com/morhetz/gruvbox
+https://camo.githubusercontent.com/a85947d98d2a157973d69e93627354614bd4ed64f2d9bed16a9828645636bace/687474703a2f2f692e696d6775722e636f6d2f776136363678672e706e67
+ */
+
 :root {
-  --accent:         hsl(333, 100%, 50%) ;
-  --primair:        hsl(333, 50%, 50%);
-  --secondaire:      hsl(333, 20%, 80%) ;
-  --bg:             hsl(000, 00%, 80%);
-  --txt:            hsl(000, 00%, 00%);
+  --accent:         hsl(330, 100%, 80%);
+  --links:          hsl(330, 50%, 40%);
+  --fg0:            #fbf1c7;
+  --fg1:            #ebdbb2;
+  --bg0:            #282828;
+  --bg1:            #3c3836;
 }
 
-article, header, footer {
-    width: 700px;
-    margin: auto;
+  /* 
+  
+  size content to viewport
+  https://www.w3schools.com/css/css_rwd_viewport.asp
+  
+  using media queries
+  https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Media_queries/Using
+  
+  Responsive Web Design - Media Queries
+
+  https://www.w3schools.com/css/css_rwd_mediaqueries.asp
+  
+  */
+
+  /* mobile? */
+@media (max-width: 900px) {
+  body {
+    margin: 0 10% 0 10%;
+  }
+}
+
+  /* desktop? */
+@media (min-width: 900px) {
+  body {
+    margin: 0 20% 0 20%;
+  }
+}
+
+/* Zoals ik vermoede in mijn schets, moet ik waarschijnlijk een grid-layout gebruiken. 
+https://developer.mozilla.org/en-US/docs/Glossary/Grid
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/grid
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/grid-template-areas
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/grid-template-columns
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/grid-template-rows
+
+Ik zocht op 'css grid cheatsheet' en had deze eenvoudige bron gevonden.
+https://grid.malven.co/
+*/
+
+body
+{
+  display: grid;
+  grid-template-columns: 1fr, 1fr;
+  grid-template-rows: 5%, 45%, 45%, 5%;
+  color: var(--fg1);
+  background: var(--bg0);
+}
+
+header, footer {
+  grid-column-start: span 2;
+}
+
+nav, ul, li {
+    list-style-type: none;
+}
+
+
+a {
+color: var(--links);
+}
+
+a:hover {
+
+color: var(--links)
 
 }
 
-menu {
-    /* https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/menu */
-  list-style-type: none;
+
+.card, .sub-card, nav, header, footer{
+  
+  background: var(--bg1);
+  border-radius: 8px;
+  padding: 1em;
+  margin: 1em;
+
 }
