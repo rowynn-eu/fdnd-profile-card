@@ -8,8 +8,8 @@ https://camo.githubusercontent.com/a85947d98d2a157973d69e93627354614bd4ed64f2d9b
  */
 
 :root {
-  --accent:         hsl(330, 100%, 80%);
-  --links:          hsl(330, 50%, 40%);
+  --accent:         hsl(330, 100%, 60%);
+  --links:          hsl(330, 30%, 60%);
   --fg0:            #fbf1c7;
   --fg1:            #ebdbb2;
   --bg0:            #282828;
@@ -44,6 +44,32 @@ https://camo.githubusercontent.com/a85947d98d2a157973d69e93627354614bd4ed64f2d9b
   }
 }
 
+/* 
+typografie
+volgens de instructies meegegeven bij Google Fonts
+https://fonts.google.com/faq
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital@0;1&display=swap');
+
+/* Importeert IBM Plex Sans & Slabo */
+
+nav > a, h1, h2, h3, .logo {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  
+}
+
+a, p {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 /* Zoals ik vermoede in mijn schets, moet ik waarschijnlijk een grid-layout gebruiken. 
 https://developer.mozilla.org/en-US/docs/Glossary/Grid
 https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/grid
@@ -53,12 +79,23 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/grid-templ
 
 Ik zocht op 'css grid cheatsheet' en had deze eenvoudige bron gevonden.
 https://grid.malven.co/
+https://flexbox.malven.co/
 */
+
+
+/* layout & kleur */
+a {
+  color: var(--links);
+  &:hover {
+    color: var(--accent)
+  }
+}
 
 body
 {
   display: grid;
-  grid-template-columns: 1fr, 1fr;
+  grid-auto-flow: dense;
+  grid-template-columns: 50%, 50%;
   grid-template-rows: 5%, 45%, 45%, 5%;
   color: var(--fg1);
   background: var(--bg0);
@@ -66,29 +103,34 @@ body
 
 header, footer {
   grid-column-start: span 2;
+  text-align: center;
+  .logo {
+    font-size: 1.25em;
+  }
 }
 
-nav, ul, li {
-    list-style-type: none;
-}
-
-
-a {
-color: var(--links);
-}
-
-a:hover {
-
-color: var(--links)
-
-}
-
-
-.card, .sub-card, nav, header, footer{
-  
+ nav, header, section, footer{
   background: var(--bg1);
   border-radius: 8px;
   padding: 1em;
-  margin: 1em;
+  margin: 0.5em;
+}
 
+nav {
+  display: flex;
+  flex-direction: column;
+  a {
+    font-size: 2em;
+  }
+}
+
+ul, ul > li {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+}
+
+figure > img {
+  max-height: 300px;
 }
