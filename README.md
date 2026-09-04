@@ -22,7 +22,7 @@ Deze opdracht is done als:
 - [x] Je hebt iteratief gewerkt
 - [x] Je hebt een breakdown-schets gemaakt en hierop feedback gekregen in een GitHub Issue
 - [x] Je hebt het ontwerp voor het visitekaartje gerealiseerd met HTML, CSS en/of JS en je hebt je code uitgelegd in comments
-- [ ] Je hebt een code/design review gedaan en feedback gekregen in GitHub Issues
+- [x] Je hebt een code/design review gedaan en feedback gekregen in GitHub Issues
 
 ## Licentie
 
