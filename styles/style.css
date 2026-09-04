@@ -64,7 +64,7 @@ https://fonts.google.com/faq
 
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital@0;1&display=swap');
 
-/* Importeert IBM Plex Sans & Slabo */
+/* Importeert IBM Plex Sans, Slabo is het uiteindlijk niet meer geworden.  */
 
 nav > a,
 h1,
@@ -83,7 +83,7 @@ li,
 ul {
 	font-family: 'IBM Plex Sans', sans-serif;
 	font-optical-sizing: auto;
-	font-weight: 400;
+	font-weight: 400; 
 	font-style: normal;
 }
 
@@ -127,6 +127,9 @@ footer {
 		font-size: 1.25rem;
 	}
 }
+
+/* toegevoegd om overflow te verbeteren. */
+h2 { line-height:0%;}
 
 nav,
 header,
